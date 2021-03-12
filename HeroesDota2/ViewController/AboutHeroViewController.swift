@@ -22,7 +22,7 @@ class AboutHeroViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         lbName.text = localized_name
         lbPrimary.text = "Primary : \(primary_attr)"
         lbAttack.text = "Attack Type : \(attack_type)"
@@ -32,7 +32,7 @@ class AboutHeroViewController: UIViewController {
         
         lbRole.text = "Roles : \(strRoles)"
         let replaced = localized_name.replacingOccurrences(of: " ", with: "_")
-        if let url = URL(string: "http://img.dotapicker.net//assets/img/heroes_large/\(replaced.lowercased()).jpg") {
+        if let url = URL(string: "\(RequestURL.urlHeroImage)\(replaced.lowercased()).jpg") {
             imgProfile.setImage(with: url)
         }
         

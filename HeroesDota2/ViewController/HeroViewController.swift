@@ -15,6 +15,7 @@ class HeroViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadHero()
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -27,10 +28,6 @@ class HeroViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.collectionView.collectionViewLayout = layout
         
     }
-    
-    //abyssal_underlord
-    //natures_prophet
-    
     
     override func viewDidAppear(_ animated: Bool) {
         
